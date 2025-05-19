@@ -1,4 +1,4 @@
-# 📚 Study Organizer API
+# 📚 MindFlow API
 
 API backend para um organizador de estudos com estrutura de quadros (boards) e cards (tarefas/tópicos) estilo Kanban.
 
