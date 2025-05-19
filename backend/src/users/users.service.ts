@@ -19,10 +19,8 @@ export class UsersService {
         return user.save();
     }
 
-    async findByEmail(email: string): Promise<User> {
-        const user = await this.userModel.findOne({ email });
-        if (!user) throw new NotFoundException('Usuário não encontrado.');
-        return user;
+    async findByEmail(email: string): Promise<UserDocument | null> {
+        return this.userModel.findOne({ email });
     }
 
     async findById(id: string): Promise<User> {

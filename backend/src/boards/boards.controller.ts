@@ -11,8 +11,8 @@ export class BoardsController {
     constructor(private readonly boardsService: BoardsService) { }
 
     @Post()
-    create(@Body('title') title: string, @Request() req) {
-        return this.boardsService.create(title, req.user.userId);
+    create(@Body() body: { title: string; description?: string }, @Request() req) {
+        return this.boardsService.create(body.title, req.user.userId, body.description);
     }
 
     @Get()

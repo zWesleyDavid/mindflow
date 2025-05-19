@@ -7,8 +7,8 @@ import { Board, BoardDocument } from './board.schema';
 export class BoardsService {
     constructor(@InjectModel(Board.name) private boardModel: Model<BoardDocument>) { }
 
-    async create(title: string, userId: string): Promise<Board> {
-        const board = new this.boardModel({ title, userId });
+    async create(title: string, userId: string, description?: string): Promise<Board> {
+        const board = new this.boardModel({ title, userId, description });
         return board.save();
     }
 
