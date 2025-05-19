@@ -9,7 +9,6 @@ async function bootstrap() {
     .setTitle('MindFlow API')
     .setDescription('API para organização de estudos com sistema de quadros e cards estilo Kanban')
     .setVersion('1.0')
-    .addTag('api')
     .addBearerAuth()
     .build();
   
